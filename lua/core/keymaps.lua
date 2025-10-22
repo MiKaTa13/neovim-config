@@ -77,4 +77,4 @@ local toggle = require("helpers.toggle")
 keymap("n", "<leader>tt", toggle.word, { desc = "Toggle word true/false" })
 
 -- Shellcheck
-keymap("n", "<leader>sc", ":!shellcheck %<CR>", { noremap = true, silent = true })
+-- keymap("n", "<leader>sc", ":!shellcheck %<CR>", { noremap = true, silent = true })
