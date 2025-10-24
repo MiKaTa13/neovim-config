@@ -29,7 +29,7 @@ telescope.setup({
             saved_only = false,
         },
         file_browser = {
-            hijack_netrw = true, -- replaces netrw!
+            hijack_netrw = false, -- replaces netrw!
             side_by_side = true,
             layout_strategy = "vertical",
             grouped = true,
