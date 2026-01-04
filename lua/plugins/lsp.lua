@@ -1,6 +1,13 @@
 -- Python pyright config
 vim.lsp.config.pyright = {
     filetypes = { "python" },
+    settings = {
+        python = {
+            analysis = {
+                typeCheckingMode = "basic", -- or "strict"
+            },
+        },
+    },
 }
 
 -- C/C++ clangd config
@@ -32,10 +39,10 @@ vim.lsp.config.nil_ls = {
 -- language server for Bash
 vim.lsp.config.bashls = {
     cmd = { 'bash-language-server', 'start' },
-    filetypes = { 'bash', 'sh' }
+    filetypes = { 'sh' }
 }
 
 vim.lsp.enable("clangd")
 vim.lsp.enable("pyright")
 vim.lsp.enable("nil_ls")
-vim.lsp.enable ("bashls")
+vim.lsp.enable("bashls")

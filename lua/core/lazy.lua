@@ -18,7 +18,7 @@ require("lazy").setup({
     -- Treesitter
     {
         "nvim-treesitter/nvim-treesitter",
-        build = ":TSUpdate",
+        run = ":TSUpdate",
         config = function()
             require("plugins.treesitter")
         end,
@@ -107,14 +107,6 @@ require("lazy").setup({
         end,
     },
 
-    -- Which-key
-    -- {
-    --     "folke/which-key.nvim",
-    --     config = function()
-    --         require("plugins.whichkey")
-    --     end,
-    -- },
-
     {
         "AckslD/nvim-neoclip.lua",
         dependencies = {
@@ -124,6 +116,11 @@ require("lazy").setup({
         config = function()
             require('neoclip').setup()
         end,
-    }
+    },
+    {
+    "stevearc/conform.nvim",
+
+    opts = {},
+}
 })
 

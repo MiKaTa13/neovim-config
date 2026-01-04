@@ -76,5 +76,12 @@ end, { desc = "Clear diagnostics for current buffer" })
 local toggle = require("helpers.toggle")
 keymap("n", "<leader>tt", toggle.word, { desc = "Toggle word true/false" })
 
--- Shellcheck
--- keymap("n", "<leader>sc", ":!shellcheck %<CR>", { noremap = true, silent = true })
+-- Toggle Vex (vertical netrw split)
+local toggle_vex = require("helpers.file-exlorer")
+vim.keymap.set('n', '<leader>v', toggle_vex, { desc = 'Toggle netrw in vertical split (Vex)' })
+
+
+vim.keymap.set({ "n", "v" }, "<leader>cf", function()
+  require("conform").format({ async = true, lsp_fallback = true })
+end, { desc = "Format file or range (conform.nvim)" })
+
