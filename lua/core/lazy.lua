@@ -24,13 +24,31 @@ require("lazy").setup({
 		end,
 	},
 
-	-- LSP + Completion
+	-- Telescope
+	{
+		"nvim-telescope/telescope.nvim",
+		version = "0.2.x",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"debugloop/telescope-undo.nvim",
+			"nvim-telescope/telescope-file-browser.nvim",
+			"AckslD/nvim-neoclip.lua",
+			{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+		},
+		config = function()
+			require("plugins.telescope")
+		end,
+	},
+
+	-- LSP
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
 			require("plugins.lsp")
 		end,
 	},
+
+	-- Completion
 	{
 		"hrsh7th/nvim-cmp",
 		dependencies = {
@@ -60,21 +78,6 @@ require("lazy").setup({
 		"numToStr/Comment.nvim",
 		config = function()
 			require("plugins.comment")
-		end,
-	},
-
-	-- Telescope
-	{
-		"nvim-telescope/telescope.nvim",
-		branch = "0.1.x",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"debugloop/telescope-undo.nvim",
-			"nvim-telescope/telescope-file-browser.nvim",
-			"AckslD/nvim-neoclip.lua",
-		},
-		config = function()
-			require("plugins.telescope")
 		end,
 	},
 

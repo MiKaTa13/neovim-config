@@ -31,16 +31,16 @@ vim.keymap.set("n", "<leader>dc", function()
 	vim.diagnostic.hide(0)
 	print("Cleared diagnostics for current buffer")
 end, { desc = "Clear diagnostics for current buffer" }) -- Telescope find files
+
+-- Telescope undo
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
 vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>")
 vim.keymap.set("n", "<leader>fB", "<cmd>Telescope buffers<cr>")
 vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>")
 vim.keymap.set("n", "<leader>fb", "<cmd>Telescope file_browser<cr>")
-
--- Telescope undo
+-- undo
 vim.keymap.set("n", "<leader>u", "<cmd>Telescope undo<cr>", { desc = "Telescope undo history" })
-
--- Telescope neoclip
+-- neoclip
 vim.keymap.set("n", "<leader>c", "<cmd>Telescope neoclip<cr>", { desc = "Telescope clipboard history" })
 vim.keymap.set("n", "<leader>cc", "<cmd>Telescope macroscope<cr>", { desc = "Telescope macroscope history" })
 
