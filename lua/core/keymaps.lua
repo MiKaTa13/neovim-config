@@ -21,9 +21,8 @@ end, { desc = "Show diagnostics for current buffer in loclist" })
 
 -- Toggle virtual text (inline messages)
 vim.keymap.set("n", "<leader>dv", function()
-	local config = vim.diagnostic.config()
-	vim.diagnostic.config({ virtual_text = not config.virtual_text })
-	print("Virtual text toggled: " .. tostring(not config.virtual_text))
+	local vt = vim.diagnostic.config().virtual_text
+	vim.diagnostic.config({ virtual_text = vt == false })
 end, { desc = "Toggle diagnostics virtual text" })
 
 -- Clear all diagnostics in the current buffer (useful for testing/debug)
