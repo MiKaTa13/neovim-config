@@ -15,7 +15,9 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	{ "folke/lazy.nvim" },
 
+	----------------
 	-- Treesitter
+	----------------
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
@@ -24,7 +26,9 @@ require("lazy").setup({
 		end,
 	},
 
+	----------------
 	-- Telescope
+	----------------
 	{
 		"nvim-telescope/telescope.nvim",
 		version = "0.2.x",
@@ -40,7 +44,9 @@ require("lazy").setup({
 		end,
 	},
 
+	----------------
 	-- LSP
+	----------------
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
@@ -48,7 +54,9 @@ require("lazy").setup({
 		end,
 	},
 
+	----------------
 	-- Completion
+	----------------
 	{
 		"hrsh7th/nvim-cmp",
 		dependencies = {
@@ -60,7 +68,9 @@ require("lazy").setup({
 		end,
 	},
 
+	----------------
 	-- Git
+	----------------
 	{
 		"tpope/vim-fugitive",
 	},
@@ -73,7 +83,9 @@ require("lazy").setup({
 		end,
 	},
 
+	----------------
 	-- Commenter
+	----------------
 	{
 		"numToStr/Comment.nvim",
 		config = function()
@@ -81,7 +93,9 @@ require("lazy").setup({
 		end,
 	},
 
+	----------------
 	-- LuaLine
+	----------------
 	{
 		"nvim-lualine/lualine.nvim",
 		config = function()
@@ -89,7 +103,9 @@ require("lazy").setup({
 		end,
 	},
 
-	-- Rose-pine colorscheme
+	----------------
+	-- Rose-pine
+	----------------
 	{
 		"rose-pine/neovim",
 		name = "rose-pine",
@@ -99,7 +115,9 @@ require("lazy").setup({
 		end,
 	},
 
+	----------------
 	-- Nvim-surround
+	----------------
 	{
 		"kylechui/nvim-surround",
 		version = "^3.0.0",
@@ -109,7 +127,9 @@ require("lazy").setup({
 		end,
 	},
 
+	----------------
 	-- Neoclip
+	----------------
 	{
 		"AckslD/nvim-neoclip.lua",
 		dependencies = {
@@ -121,24 +141,9 @@ require("lazy").setup({
 		end,
 	},
 
-	-- Conform formatter
-	-- {
-	-- 	"stevearc/conform.nvim",
-	-- 	config = function()
-	-- 		require("conform").setup({
-	-- 			formatters_by_ft = {
-	-- 				python = { "black" },
-	-- 				lua = { "stylua" },
-	-- 				javascript = { "prettier" },
-	-- 			},
-	-- 			format_on_save = {
-	-- 				timeout_ms = 500,
-	-- 				lsp_fallback = true,
-	-- 			},
-	-- 		})
-	-- 	end,
-	-- },
-	-- Conform formatter
+	----------------
+	-- Formatter
+	----------------
 	{
 		"stevearc/conform.nvim",
 		config = function()
