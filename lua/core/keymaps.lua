@@ -53,7 +53,3 @@ keymap("n", "<leader>cf", "<cmd>!clang-format -i %<cr>", opts)
 -- Toggle plugin
 local toggle = require("helpers.toggle")
 keymap("n", "<leader>tt", toggle.word, { desc = "Toggle word true/false" })
-
--- Toggle Vex (vertical netrw split)
-local toggle_vex = require("helpers.file-exlorer")
-vim.keymap.set("n", "<leader>v", toggle_vex, { desc = "Toggle netrw in vertical split (Vex)" })

@@ -8,8 +8,7 @@ return {
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-			-- 1. Configure LSP Servers using new vim.lsp.config API
-			-- ==========================================
+			-- Configure LSP Servers using new vim.lsp.config API
 
 			vim.lsp.config.pyright = {
 				cmd = { "pyright-langserver", "--stdio" },
@@ -69,12 +68,10 @@ return {
 				},
 			}
 
-			-- 2. Enable LSP servers
-			-- ==========================================
+			-- Enable LSP servers
 			vim.lsp.enable({ "pyright", "clangd", "nil_ls", "bashls", "lua_ls" })
 
-			-- 3. Setup Diagnostic Configuration
-			-- ==========================================
+			-- Setup Diagnostic Configuration
 			vim.diagnostic.config({
 				virtual_text = {
 					enable = true,
@@ -105,8 +102,7 @@ return {
 			vim.api.nvim_set_hl(0, "DiagnosticUnderlineError", { undercurl = true, sp = "#db4b4b" })
 			vim.api.nvim_set_hl(0, "DiagnosticUnderlineWarn", { undercurl = true, sp = "#e0af68" })
 
-			-- 4. Setup Keymaps
-			-- ==========================================
+			-- Setup Keymaps
 			local function setup_keymaps(bufnr)
 				local opts = { noremap = true, silent = true, buffer = bufnr }
 				vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
