@@ -15,6 +15,9 @@ vim.opt.termguicolors = true
 vim.opt.errorformat = "%f:%l:%c: %m"
 
 -- Netrw --
+-- disable netrw
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 vim.g.netrw_browse_split = 4 -- Open directories in a split
 vim.g.netrw_liststyle = 3 -- Show files and dirs with a tree view
 vim.g.netrw_altv = 1 -- Vertical split for :Vex
