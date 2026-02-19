@@ -2,6 +2,7 @@ local toggle = {}
 
 toggle.word = function()
 	local toggles = {
+		["1"] = "0",
 		["True"] = "False",
 		["False"] = "True",
 		["true"] = "false",
